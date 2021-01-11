@@ -1,0 +1,438 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  min-width: 100%;
+  min-height: 100vh;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(1, 1, 10, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-height: 80vh;
+  height: fit-content;
+  width: 50%;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.search-sort-card {
+  margin: 15px 0 0 0;
+  min-width: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-box {
+  background: #2f3640;
+  height: fit-content;
+  border-radius: 40px;
+  box-shadow: 0px 0px 15px skyblue;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.search-box:hover > .search-txt {
+  width: 100px;
+  padding: 0 6px;
+  transition: 0.5s ease;
+}
+
+.search-box:hover > .search-btn {
+  background: white;
+}
+
+.search-btn {
+  color: brown;
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 1em;
+  transition: 0.4s ease;
+  line-height: 30px;
+  width: 0px;
+}
+
+.search-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.outer-card {
+  margin: 2%;
+  min-width: 98%;
+  width: fit-content;
+  min-height: 70vh;
+  height: fit-content;
+  background-color: rgb(16, 41, 78);
+}
+
+.inner-card {
+  margin: 5%;
+  min-width: 90%;
+  height: 20%;
+  width: fit-content;
+  color: white;
+  background-color: rgb(19, 5, 5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.inner-card:hover {
+  background-color: rgb(22, 128, 170);
+  transform: scale(1.05);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.inner-card:active {
+  border-radius: 18px;
+}
+
+.row-1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.image {
+  width: 60%;
+  border-radius: 20%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.image:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.row-2 {
+  flex: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-opt {
+  padding: 5px;
+  border: none;
+  border-radius: 18px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: rgb(0, 217, 255);
+  box-shadow: 0px 0px 15px skyblue;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.select-opt:hover {
+  color: skyblue;
+  background-color: black;
+  transform: scale(1.05);
+}
+
+.add-birthday {
+  margin-bottom: 1.5%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 18px;
+  background-color: rgb(0, 217, 255);
+  box-shadow: 0px 0px 15px skyblue;
+  transition: 0.4s;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.add-birthday:hover {
+  color: skyblue;
+  background-color: black;
+}
+
+.edit-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.name {
+  margin-top: 4%;
+  font-size: 1.2em;
+  padding: 2px 10px;
+  border-radius: 18px;
+  color: rgb(247, 184, 107);
+  background: rgba(252, 248, 248, 0.192);
+  align-self: center;
+  justify-self: center;
+  order: 1;
+}
+
+.name:hover {
+  transform: scale(1.25);
+  transition: 0.5s ease;
+}
+
+.dob-age {
+  width: 100%;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  order: 2;
+}
+
+.daystogo {
+  margin-top: 1%;
+  align-self: center;
+  justify-self: center;
+  order: 3;
+}
+
+.dob {
+  margin-left: 5%;
+  padding: 2px 10px;
+  border-radius: 18px;
+  background: rgba(252, 248, 248, 0.192);
+}
+
+.dob:hover {
+  transform: scale(1.2);
+  transition: 0.5s ease;
+  color: rgb(247, 184, 107);
+}
+
+.age {
+  margin-right: 6%;
+  padding: 2px 7px;
+  border-radius: 18px;
+  background: rgba(252, 248, 248, 0.192);
+}
+
+.age:hover {
+  transform: scale(1.2);
+  transition: 0.5s ease;
+  color: rgb(247, 184, 107);
+}
+
+.edit {
+  margin-right: 3%;
+  margin-bottom: 1%;
+  align-self: flex-end;
+  justify-self: flex-end;
+  order: 4;
+}
+
+.edit:hover {
+  transform: scale(1.2);
+  transition: 0.5s ease;
+}
+
+.container2 {
+  min-height: 85vh;
+  height: fit-content;
+  width: 50%;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.input-form {
+  color: white;
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.name-input {
+  width: 70%;
+  padding: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+.dob-input {
+  width: 70%;
+  padding: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+.image-input {
+  padding: 5px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-left: 10%;
+}
+
+label {
+  color: skyblue;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.link-btn {
+  text-decoration: none;
+  margin-bottom: 1.5%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 18px;
+  background-color: rgb(0, 217, 255);
+  box-shadow: 0px 0px 15px skyblue;
+  transition: 0.4s;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.link-btn:hover {
+  color: skyblue;
+  background-color: black;
+  text-decoration: none;
+}
+
+.cancel-birthday {
+  margin-bottom: 1.5%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 18px;
+  background-color: rgb(231, 233, 121);
+  box-shadow: 0px 0px 15px rgb(231, 233, 121);
+  transition: 0.4s;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.cancel-birthday:hover {
+  color: rgb(231, 233, 121);
+  background-color: black;
+}
+
+.delete-birthday {
+  margin-bottom: 1.5%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 18px;
+  background-color: tomato;
+  box-shadow: 0px 0px 15px tomato;
+  transition: 0.4s;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.delete-birthday:hover {
+  color: tomato;
+  background-color: black;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 60%;
+    height: 90%;
+  }
+  .container2 {
+    width: 60%;
+    height: 90%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 70%;
+    height: 90%;
+  }
+  .container2 {
+    width: 80%;
+    height: 90%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 90%;
+    height: 90%;
+  }
+  .container2 {
+    width: 90%;
+    height: 90%;
+  }
+  .name {
+    font-size: 1em;
+  }
+  .name-input {
+    width: 85%;
+  }
+  .dob-input {
+    width: 85%;
+  }
+  .image-input {
+    margin-left: 25%;
+  }
+  .select-opt {
+    width: fit-content;
+  }
+  .dob {
+    margin-left: 1%;
+  }
+}
